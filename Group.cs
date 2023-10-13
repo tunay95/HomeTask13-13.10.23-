@@ -27,8 +27,10 @@ namespace HomeTask13_13._10._23_
         }
         public int StudentLimit { get; set; }
         Student[] Students;
-        public Group()
+        public Group(string name, int limit)
         {
+            No = name;
+            StudentLimit = limit;
             Students = new Student[0];
         }
 
@@ -71,6 +73,10 @@ namespace HomeTask13_13._10._23_
 
         }
 
+        public string GroupInfo()
+        {
+            return $"Group Name: {No}\nStudent Limit: {StudentLimit}";
+        }
 
 
     }
